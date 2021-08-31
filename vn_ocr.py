@@ -78,7 +78,7 @@ def paste_to_clipboard():
         win32clipboard.OpenClipboard()
         win32clipboard.EmptyClipboard()
         print(text[x])
-        win32clipboard.SetClipboardText(text[x])
+        win32clipboard.SetClipboardText(text[x], win32clipboard.CF_UNICODETEXT)
         win32clipboard.CloseClipboard()
 
 
